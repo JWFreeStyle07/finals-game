@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dti4w51c2hyac"]
+
+[ext_resource type="Script" uid="uid://cd0ykxa3snnsp" path="res://scripts/cutscenes/play_cutscene.gd" id="1_g6jjp"]
+
+[node name="PlayCutScene" type="Control" unique_id=1711625621]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g6jjp")
+
+[node name="VideoPlayer" type="VideoStreamPlayer" parent="." unique_id=2005584565]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SkipButton" type="Button" parent="." unique_id=947554580]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "SKIP  ▶▶"

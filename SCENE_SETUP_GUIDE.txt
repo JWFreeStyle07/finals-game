@@ -1,0 +1,101 @@
+# SCENE SETUP GUIDE
+# How to create each .tscn file in the Godot 4 editor
+
+# ═══════════════════════════════════════════════
+# 1. IntroVideo.tscn
+# ═══════════════════════════════════════════════
+# 1. Scene > New Scene
+# 2. Root node: Control  → rename to "IntroVideo"
+#    - Layout: Full Rect (Anchor Preset)
+# 3. Add child: VideoStreamPlayer → rename to "VideoPlayer"
+#    - Layout: Full Rect
+# 4. Add child: Button → rename to "SkipButton"
+#    - Text: "SKIP  ▶▶"
+# 5. Attach script: scripts/intro/intro_video.gd
+# 6. Save as: scenes/intro/IntroVideo.tscn
+
+# ═══════════════════════════════════════════════
+# 2. MainMenu.tscn
+# ═══════════════════════════════════════════════
+# 1. Scene > New Scene
+# 2. Root node: Control → rename to "MainMenu"
+#    - Layout: Full Rect
+# 3. Add child: TextureRect → rename to "Background"
+#    - Layout: Full Rect
+# 4. Add child: AudioStreamPlayer → rename to "MusicPlayer"
+#    - Stream: res://assets/audio/menu_music.ogg
+#    - Autoplay: OFF (script handles it)
+#    - Loop: ON  (set in the .ogg import settings or via AudioStreamOggVorbis.loop)
+# 5. Attach script: scripts/menus/main_menu.gd
+#    (Buttons are built entirely by the script — no manual button nodes needed)
+# 6. Save as: scenes/menus/MainMenu.tscn
+
+# ═══════════════════════════════════════════════
+# 3. LevelsMenu.tscn
+# ═══════════════════════════════════════════════
+# 1. Scene > New Scene
+# 2. Root node: Control → rename to "LevelsMenu"
+#    - Layout: Full Rect
+# 3. Attach script: scripts/menus/levels_menu.gd
+#    (All UI is built by the script)
+# 4. Save as: scenes/menus/LevelsMenu.tscn
+
+# ═══════════════════════════════════════════════
+# 4. SettingsMenu.tscn
+# ═══════════════════════════════════════════════
+# 1. Scene > New Scene
+# 2. Root node: Control → rename to "SettingsMenu"
+#    - Layout: Full Rect
+# 3. Attach script: scripts/menus/settings_menu.gd
+#    (All UI is built by the script)
+# 4. Save as: scenes/menus/SettingsMenu.tscn
+
+# ═══════════════════════════════════════════════
+# 5. PlayCutscene.tscn
+# ═══════════════════════════════════════════════
+# 1. Scene > New Scene
+# 2. Root node: Control → rename to "PlayCutscene"
+#    - Layout: Full Rect
+# 3. Add child: VideoStreamPlayer → rename to "VideoPlayer"
+#    - Layout: Full Rect
+# 4. Add child: Button → rename to "SkipButton"
+#    - Text: "SKIP  ▶▶"
+# 5. Attach script: scripts/cutscene/play_cutscene.gd
+# 6. Save as: scenes/cutscene/PlayCutscene.tscn
+
+# ═══════════════════════════════════════════════
+# 6. Level scenes (repeat for each level)
+# ═══════════════════════════════════════════════
+# 1. Scene > New Scene
+# 2. Root node: Node2D → rename to "Level1" (or Level2, etc.)
+# 3. Add your game content here
+# 4. Save as: scenes/levels/Level1.tscn  (through Level5.tscn)
+
+# ═══════════════════════════════════════════════
+# 7. AutoLoad Setup (REQUIRED)
+# ═══════════════════════════════════════════════
+# Project > Project Settings > AutoLoad tab
+# Click the folder icon → select: scripts/globals/GameData.gd
+# Set Node Name to: GameData
+# Click Add
+# ✅ This makes GameData accessible from every script.
+
+# ═══════════════════════════════════════════════
+# 8. Main Scene Setup (REQUIRED)
+# ═══════════════════════════════════════════════
+# Project > Project Settings > Application > Run
+# Set "Main Scene" to: res://scenes/intro/IntroVideo.tscn
+
+# ═══════════════════════════════════════════════
+# 9. Music Looping
+# ═══════════════════════════════════════════════
+# Select menu_music.ogg in FileSystem panel
+# In Import tab → check "Loop" → click Reimport
+
+# ═══════════════════════════════════════════════
+# 10. Video Format Reminder
+# ═══════════════════════════════════════════════
+# Godot 4 requires .ogv (Ogg Theora) format for VideoStreamPlayer.
+# Convert with ffmpeg:
+#   ffmpeg -i your_intro.mp4 -c:v libtheora -q:v 7 -c:a libvorbis intro.ogv
+#   ffmpeg -i your_cutscene.mp4 -c:v libtheora -q:v 7 -c:a libvorbis play_cutscene.ogv

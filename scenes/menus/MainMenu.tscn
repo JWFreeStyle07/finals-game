@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cse6r4ytb2xtj"]
+
+[ext_resource type="Script" uid="uid://ka374b8dmntx" path="res://scripts/menus/main_menu.gd" id="1_wlpbi"]
+
+[sub_resource type="AudioStreamOggVorbis" id="AudioStreamOggVorbis_ghjcc"]
+
+[node name="MainMenu" type="Control" unique_id=991467671]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wlpbi")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1053086251]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=347590085]
+stream = SubResource("AudioStreamOggVorbis_ghjcc")
