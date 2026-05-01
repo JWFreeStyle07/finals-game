@@ -142,7 +142,7 @@ func _on_cell_unhover(btn: Button) -> void:
 func _on_level_selected(level_num: int) -> void:
 	GameData.current_level = level_num
 	GameData.save_data()
-	_fade_then(func(): GameData.go_to_scene("res://scenes/cutscene/PlayCutscene.tscn"))
+	_fade_then(func(): GameData.go_to_scene("res://scenes/cutscenes/PlayCutscene.tscn"))
 
 func _on_back() -> void:
 	_fade_then(func(): GameData.go_to_scene("res://scenes/menus/MainMenu.tscn"))

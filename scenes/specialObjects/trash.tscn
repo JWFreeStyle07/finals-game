@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bf5upe1jd74mg"]
+
+[node name="trash" type="StaticBody2D" unique_id=1407855881]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=818507351]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=833640794]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=163455431]
+
+[node name="Label" type="Label" parent="." unique_id=440413552]
+offset_right = 40.0
+offset_bottom = 23.0
