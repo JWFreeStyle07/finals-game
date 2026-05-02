@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://lx618181kyh5"]
+
+[ext_resource type="Script" uid="uid://c85he04lommbf" path="res://scripts/items/toyDuck.gd" id="1_n2ikq"]
+[ext_resource type="Texture2D" uid="uid://bfkwr8udb342t" path="res://assets/sprites/interior/interior/SmallItems.png" id="2_i06ln"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gecqr"]
+size = Vector2(8, 8)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_em5r3"]
+radius = 7.071068
+
+[node name="ToyDuck" type="StaticBody2D" unique_id=470798135]
+script = ExtResource("1_n2ikq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=778704991]
+texture = ExtResource("2_i06ln")
+region_enabled = true
+region_rect = Rect2(65.502014, 6.3223686, 11.586578, 8.215939)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1754758811]
+shape = SubResource("RectangleShape2D_gecqr")
+
+[node name="InteractZone" type="Area2D" parent="." unique_id=1149095031]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractZone" unique_id=29886280]
+shape = SubResource("CircleShape2D_em5r3")
+
+[node name="PromptLabel" type="Label" parent="." unique_id=596273186]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "[E] Pick up toy"

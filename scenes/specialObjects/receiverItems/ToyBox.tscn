@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://12hxwywol14v"]
+
+[ext_resource type="Script" uid="uid://bx2gw6jd1mlqf" path="res://scripts/items/ReceiverObject.gd" id="1_7dyup"]
+[ext_resource type="Texture2D" uid="uid://bfkwr8udb342t" path="res://assets/sprites/interior/interior/SmallItems.png" id="2_hnn22"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e178s"]
+size = Vector2(12, 10)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rfaoh"]
+radius = 14.0
+
+[node name="ReceiverObject" type="StaticBody2D" unique_id=306230674]
+script = ExtResource("1_7dyup")
+receiver_id = "toy_box"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=813204601]
+texture = ExtResource("2_hnn22")
+region_enabled = true
+region_rect = Rect2(97.900085, 116.70809, 12.337387, 9.869919)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=627792568]
+shape = SubResource("RectangleShape2D_e178s")
+
+[node name="InteractZone" type="Area2D" parent="." unique_id=478013075]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractZone" unique_id=1367497950]
+shape = SubResource("CircleShape2D_rfaoh")
+
+[node name="PromptLabel" type="Label" parent="." unique_id=44295868]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "[E] Place toy here"

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://b38t24yhiga8r"]
+
+[ext_resource type="Texture2D" uid="uid://bfkwr8udb342t" path="res://assets/sprites/interior/interior/SmallItems.png" id="1_f8a6i"]
+[ext_resource type="Script" uid="uid://wmycg6xpdylx" path="res://scripts/items/ConsumableItem.gd" id="1_o6esj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o6esj"]
+radius = 4.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0w4wl"]
+radius = 8.0
+
+[node name="ConsumableItem" type="StaticBody2D" unique_id=1193708110]
+script = ExtResource("1_o6esj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=749863991]
+texture = ExtResource("1_f8a6i")
+region_enabled = true
+region_rect = Rect2(67.51069, 117.44321, 8.894836, 9.810486)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1959719215]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_o6esj")
+
+[node name="InteractZone" type="Area2D" parent="." unique_id=978122375]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractZone" unique_id=1934099173]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_0w4wl")
+
+[node name="PromptLabel" type="Label" parent="." unique_id=1706936529]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "[E] Eat Apple"

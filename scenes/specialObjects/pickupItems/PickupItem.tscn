@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cmuqd7hd2dupe"]
+
+[ext_resource type="Script" uid="uid://dcn81muhea81g" path="res://scripts/items/PickupItem.gd" id="1_2jvet"]
+[ext_resource type="Texture2D" uid="uid://bfkwr8udb342t" path="res://assets/sprites/interior/interior/SmallItems.png" id="2_2ei2o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gecqr"]
+size = Vector2(8, 8)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_em5r3"]
+radius = 7.071068
+
+[node name="PickupItem" type="StaticBody2D" unique_id=470798135]
+script = ExtResource("1_2jvet")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=778704991]
+texture = ExtResource("2_2ei2o")
+region_enabled = true
+region_rect = Rect2(52.566494, 22.594097, 8.648354, 8.6483555)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1754758811]
+shape = SubResource("RectangleShape2D_gecqr")
+
+[node name="InteractZone" type="Area2D" parent="." unique_id=1149095031]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractZone" unique_id=29886280]
+shape = SubResource("CircleShape2D_em5r3")
+
+[node name="PromptLabel" type="Label" parent="." unique_id=596273186]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "[E] Pick up trash"

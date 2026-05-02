@@ -103,12 +103,13 @@ radius = 4.0
 height = 10.0
 
 [node name="Player" type="CharacterBody2D" unique_id=282003277]
+z_index = 1
 script = ExtResource("1_8afob")
 
 [node name="InteractionArea" type="Area2D" parent="." unique_id=2085947985]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=642213117]
-position = Vector2(5, 26)
+position = Vector2(5, 14)
 scale = Vector2(2, 2)
 shape = SubResource("CircleShape2D_h17s1")
 
@@ -119,12 +120,14 @@ sprite_frames = SubResource("SpriteFrames_lgqa7")
 animation = &"idle_up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1406304079]
-position = Vector2(5, 17)
+position = Vector2(5, 21)
 shape = SubResource("CapsuleShape2D_h17s1")
 
 [node name="HoldPoint" type="Marker2D" parent="." unique_id=141909908]
 
-[node name="StepSound" type="AudioStreamPlayer2D" parent="." unique_id=1502603398]
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1953737987]
 zoom = Vector2(4, 4)
+
+[node name="StepSound" type="AudioStreamPlayer2D" parent="." unique_id=1502603398]
+
+[node name="PickupSound" type="AudioStreamPlayer2D" parent="." unique_id=475774096]
