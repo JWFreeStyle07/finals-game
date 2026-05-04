@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cilqeokfe55uf"]
+
+[ext_resource type="Script" uid="uid://cbgqp5dwahyb3" path="res://scripts/items/dishes.gd" id="1_a88co"]
+[ext_resource type="Texture2D" uid="uid://bfkwr8udb342t" path="res://assets/sprites/interior/interior/SmallItems.png" id="2_wdsdf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rafo7"]
+size = Vector2(12, 8)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q10cx"]
+radius = 17.262676
+
+[node name="dishes" type="StaticBody2D" unique_id=1660314110]
+script = ExtResource("1_a88co")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1154205005]
+texture = ExtResource("2_wdsdf")
+region_enabled = true
+region_rect = Rect2(0.8852043, 70.51804, 14.101311, 8.424904)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1088664983]
+shape = SubResource("RectangleShape2D_rafo7")
+
+[node name="InteractZone" type="Area2D" parent="." unique_id=163916102]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractZone" unique_id=99326336]
+shape = SubResource("CircleShape2D_q10cx")
+
+[node name="PromptLabel" type="Label" parent="." unique_id=1089941511]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "[E] Pickup Dishes"

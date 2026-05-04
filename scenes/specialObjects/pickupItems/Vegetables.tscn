@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://y8j7xxv0ydmv"]
+
+[ext_resource type="Script" uid="uid://cemcc7355gfu5" path="res://scripts/items/vegetables.gd" id="1_4cq1v"]
+[ext_resource type="Texture2D" uid="uid://bfkwr8udb342t" path="res://assets/sprites/interior/interior/SmallItems.png" id="2_i5qhy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gecqr"]
+size = Vector2(8, 8)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_em5r3"]
+radius = 7.071068
+
+[node name="Vegetables" type="StaticBody2D" unique_id=470798135]
+script = ExtResource("1_4cq1v")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=778704991]
+texture = ExtResource("2_i5qhy")
+region_enabled = true
+region_rect = Rect2(98.90827, 20.312344, 8.008759, 6.6159306)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1754758811]
+shape = SubResource("RectangleShape2D_gecqr")
+
+[node name="InteractZone" type="Area2D" parent="." unique_id=1149095031]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractZone" unique_id=29886280]
+shape = SubResource("CircleShape2D_em5r3")
+
+[node name="PromptLabel" type="Label" parent="." unique_id=596273186]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "[E] Pick up vegetable"

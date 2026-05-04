@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://tsnrctkx2wae" path="res://assets/sprites/characters/Uno/WalkBackwards/WalkB2.png" id="10_uf5tr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h17s1"]
-radius = 3.0
+radius = 9.617692
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lgqa7"]
 animations = [{

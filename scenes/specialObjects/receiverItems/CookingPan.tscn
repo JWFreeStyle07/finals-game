@@ -1,21 +1,21 @@
-[gd_scene format=3 uid="uid://12hxwywol14v"]
+[gd_scene format=3 uid="uid://bf4xy67nbotud"]
 
-[ext_resource type="Script" uid="uid://dcnjucjxlehhx" path="res://scripts/items/toyBox.gd" id="1_7dyup"]
-[ext_resource type="Texture2D" uid="uid://bfkwr8udb342t" path="res://assets/sprites/interior/interior/SmallItems.png" id="2_hnn22"]
+[ext_resource type="Script" uid="uid://c4a5k7u5fu38d" path="res://scripts/items/cookingPan.gd" id="1_lklv7"]
+[ext_resource type="Texture2D" uid="uid://bfkwr8udb342t" path="res://assets/sprites/interior/interior/SmallItems.png" id="2_0qrdp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e178s"]
-size = Vector2(12, 10)
+size = Vector2(14, 14)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rfaoh"]
 radius = 14.0
 
-[node name="ToyBox" type="StaticBody2D" unique_id=306230674]
-script = ExtResource("1_7dyup")
+[node name="CookingPan" type="StaticBody2D" unique_id=306230674]
+script = ExtResource("1_lklv7")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=813204601]
-texture = ExtResource("2_hnn22")
+texture = ExtResource("2_0qrdp")
 region_enabled = true
-region_rect = Rect2(97.900085, 116.70809, 12.337387, 9.869919)
+region_rect = Rect2(64.868965, 65.8582, 14.132378, 13.238953)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=627792568]
 shape = SubResource("RectangleShape2D_e178s")
@@ -26,6 +26,8 @@ shape = SubResource("RectangleShape2D_e178s")
 shape = SubResource("CircleShape2D_rfaoh")
 
 [node name="PromptLabel" type="Label" parent="." unique_id=44295868]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "[E] Place toy here"
+offset_left = -62.0
+offset_top = 3.0
+offset_right = 89.0
+offset_bottom = 26.0
+text = "[E] Put vegetables here"

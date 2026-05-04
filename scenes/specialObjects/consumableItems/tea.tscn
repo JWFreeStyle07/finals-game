@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://ech55dofpqyy"]
+
+[ext_resource type="Texture2D" uid="uid://bfkwr8udb342t" path="res://assets/sprites/interior/interior/SmallItems.png" id="1_42v1m"]
+[ext_resource type="Script" uid="uid://dybrc0vah1av1" path="res://scripts/items/consumeTea.gd" id="1_itwqx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_itwqx"]
+radius = 9.055386
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7fnap"]
+radius = 13.0
+
+[node name="Tea" type="StaticBody2D" unique_id=466156364]
+script = ExtResource("1_itwqx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=651806709]
+texture = ExtResource("1_42v1m")
+region_enabled = true
+region_rect = Rect2(115.845436, 101.45368, 10.4173355, 9.827675)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1984969806]
+shape = SubResource("CircleShape2D_itwqx")
+
+[node name="InteractZone" type="Area2D" parent="." unique_id=180612559]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractZone" unique_id=1874674406]
+shape = SubResource("CircleShape2D_7fnap")
+
+[node name="PromptLabel" type="Label" parent="." unique_id=375605230]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "[E] Drink Tea"

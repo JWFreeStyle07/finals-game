@@ -13,6 +13,13 @@
 [ext_resource type="PackedScene" uid="uid://b38t24yhiga8r" path="res://scenes/specialObjects/consumableItems/ConsumableItem.tscn" id="11_lha2r"]
 [ext_resource type="PackedScene" uid="uid://12hxwywol14v" path="res://scenes/specialObjects/receiverItems/ToyBox.tscn" id="12_6owa4"]
 [ext_resource type="PackedScene" uid="uid://lx618181kyh5" path="res://scenes/specialObjects/pickupItems/ToyDuck.tscn" id="13_n5pya"]
+[ext_resource type="PackedScene" uid="uid://ech55dofpqyy" path="res://scenes/specialObjects/consumableItems/tea.tscn" id="14_kypp1"]
+[ext_resource type="PackedScene" uid="uid://d2rms0hv74tl0" path="res://scenes/specialObjects/receiverItems/laundryBasket.tscn" id="15_ukjja"]
+[ext_resource type="PackedScene" uid="uid://bkrwdub1ay0p8" path="res://scenes/specialObjects/pickupItems/DirtyClothes.tscn" id="16_p5s5a"]
+[ext_resource type="PackedScene" uid="uid://cxgo2403p558v" path="res://scenes/specialObjects/receiverItems/KitchenSink.tscn" id="17_njy47"]
+[ext_resource type="PackedScene" uid="uid://cilqeokfe55uf" path="res://scenes/specialObjects/pickupItems/Dishes.tscn" id="18_j7nyf"]
+[ext_resource type="PackedScene" uid="uid://bf4xy67nbotud" path="res://scenes/specialObjects/receiverItems/CookingPan.tscn" id="19_bspq0"]
+[ext_resource type="PackedScene" uid="uid://y8j7xxv0ydmv" path="res://scenes/specialObjects/pickupItems/Vegetables.tscn" id="20_dqba7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m00rq"]
 texture = ExtResource("2_m00rq")
@@ -1782,7 +1789,7 @@ tile_map_data = PackedByteArray("AAALAAYAAAACAAQAAAALAAcAAAACAAUAAAALAAgAAAACAAY
 tile_set = SubResource("TileSet_m00rq")
 
 [node name="smallItems" type="TileMapLayer" parent="." unique_id=13206157]
-tile_map_data = PackedByteArray("AAASAA4AAAAFAAEAAAAQAB4AAAAHAAIAAAAIAA4AAAAAAAEAAAAQAAUAAAAAAAEAAAANAA4AAAABAAEAAAAKABMAAAAHAAEAAAAPAAcAAAADAAMAAAAKABgAAAAFAAAAAAAJABgAAAAGAAAAAAAMABgAAAABAAAAAAAUABsAAAABAAAAAAAXABAAAAAFAAQAAAAJABMAAAABAAQAAAALABMAAAADAAQAAAATABAAAAAEAAQAAAASABAAAAAEAAcAAAAVABAAAAAGAAUAAAAXABQAAAAFAAUAABARAA8AAAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAASAA4AAAAFAAEAAAAIAA4AAAAAAAEAAAAQAAUAAAAAAAEAAAANAA4AAAABAAEAAAAKABMAAAAHAAEAAAAPAAcAAAADAAMAAAAKABgAAAAFAAAAAAAJABgAAAAGAAAAAAAMABgAAAABAAAAAAAUABsAAAABAAAAAAAXABAAAAAFAAQAAAAJABMAAAABAAQAAAALABMAAAADAAQAAAASABAAAAAEAAcAAAAVABAAAAAGAAUAAAAXABQAAAAFAAUAABARAA8AAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_e5nfq")
 
 [node name="Player" parent="." unique_id=282003277 groups=["player"] instance=ExtResource("6_lha2r")]
@@ -1800,6 +1807,12 @@ script = ExtResource("8_brv20")
 
 [node name="Objects" type="Node2D" parent="GameManager" unique_id=1135141702]
 
+[node name="KitchenSink" parent="GameManager/Objects" unique_id=1203196920 instance=ExtResource("17_njy47")]
+position = Vector2(288, 278)
+
+[node name="Tea" parent="GameManager/Objects" unique_id=466156364 instance=ExtResource("14_kypp1")]
+position = Vector2(153, 303)
+
 [node name="ToyDuck" parent="GameManager/Objects" unique_id=692301160 instance=ExtResource("13_n5pya")]
 position = Vector2(273, 146)
 
@@ -1814,3 +1827,18 @@ position = Vector2(1, 294)
 
 [node name="ToyBox" parent="GameManager/Objects" unique_id=526394011 instance=ExtResource("12_6owa4")]
 position = Vector2(375, 406)
+
+[node name="clothesBox" parent="GameManager/Objects" unique_id=846413963 instance=ExtResource("15_ukjja")]
+position = Vector2(256, 487)
+
+[node name="dirtyCloth" parent="GameManager/Objects" unique_id=1660314110 instance=ExtResource("16_p5s5a")]
+position = Vector2(173, 139)
+
+[node name="dishes" parent="GameManager/Objects" unique_id=1701879752 instance=ExtResource("18_j7nyf")]
+position = Vector2(167, 190)
+
+[node name="CookingPan" parent="GameManager/Objects" unique_id=625738777 instance=ExtResource("19_bspq0")]
+position = Vector2(367, 309)
+
+[node name="Vegetables" parent="GameManager/Objects" unique_id=2125980678 instance=ExtResource("20_dqba7")]
+position = Vector2(42, 346)

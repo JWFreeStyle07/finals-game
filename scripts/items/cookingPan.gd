@@ -16,10 +16,10 @@ extends StaticBody2D
 # ═══════════════════════════════════════════════════════════════════
 
 ## Must match the "receiver_id" field in GameManager tasks
-@export var receiver_id : String = "trash_bin"
+@export var receiver_id : String = "cooking_pan"
 
 ## Which item IDs this receiver accepts (leave empty to accept anything)
-@export var accepted_item_ids : Array[String] = ["crumpled_paper"]
+@export var accepted_item_ids : Array[String] = ["vegetables"]
 
 @onready var interact_zone  : Area2D = $InteractZone
 @onready var prompt_label   : Label  = $PromptLabel
