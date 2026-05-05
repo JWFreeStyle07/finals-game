@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dd0jbjxe74a52"]
+
+[ext_resource type="Script" uid="uid://dxr6eq0csfyhy" path="res://scripts/pause/PauseMenu.gd" id="1_6gebp"]
+[ext_resource type="Texture2D" uid="uid://rtg7bsr72i3c" path="res://assets/sprites/pause/separated/pause_board.png" id="2_2g1j7"]
+[ext_resource type="Texture2D" uid="uid://c6eo2y75nnvkk" path="res://assets/sprites/pause/separated/music_note.png" id="3_elykl"]
+[ext_resource type="Texture2D" uid="uid://cxpfvhpxysa6m" path="res://assets/sprites/pause/separated/volume.png" id="4_qwyx6"]
+[ext_resource type="Texture2D" uid="uid://cxihim8d7o1hj" path="res://assets/sprites/pause/separated/music_and_volume_slide.png" id="5_4vi8c"]
+[ext_resource type="Texture2D" uid="uid://bi7i2snhwrywh" path="res://assets/sprites/pause/separated/homeicon.png" id="6_1i4mm"]
+[ext_resource type="Texture2D" uid="uid://dhr0bgjjqu4lw" path="res://assets/sprites/pause/separated/play_button.png" id="7_f25bj"]
+[ext_resource type="Texture2D" uid="uid://d1yoi7h25i0ci" path="res://assets/sprites/pause/separated/retry.png" id="8_s7fkj"]
+[ext_resource type="Texture2D" uid="uid://bete38adxl1yh" path="res://assets/sprites/pause/separated/slider.png" id="9_elykl"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=1229839065]
+script = ExtResource("1_6gebp")
+board_texture = ExtResource("2_2g1j7")
+music_icon_texture = ExtResource("3_elykl")
+sfx_icon_texture = ExtResource("4_qwyx6")
+slider_track_texture = ExtResource("5_4vi8c")
+home_texture = ExtResource("6_1i4mm")
+play_texture = ExtResource("7_f25bj")
+restart_texture = ExtResource("8_s7fkj")
+slider_grabber_texture = ExtResource("9_elykl")

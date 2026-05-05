@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dcn81muhea81g" path="res://scripts/items/PickupItem.gd" id="1_2jvet"]
 [ext_resource type="Texture2D" uid="uid://bfkwr8udb342t" path="res://assets/sprites/interior/interior/SmallItems.png" id="2_2ei2o"]
+[ext_resource type="FontFile" uid="uid://dyn5ynd21i0d6" path="res://assets/fonts/Jersey25-Regular.ttf" id="3_8qotv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gecqr"]
 size = Vector2(8, 8)
@@ -26,6 +27,8 @@ shape = SubResource("RectangleShape2D_gecqr")
 shape = SubResource("CircleShape2D_em5r3")
 
 [node name="PromptLabel" type="Label" parent="." unique_id=596273186]
+texture_filter = 1
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("3_8qotv")
 text = "[E] Pick up trash"

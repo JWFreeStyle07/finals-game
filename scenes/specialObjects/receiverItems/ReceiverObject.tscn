@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bx2gw6jd1mlqf" path="res://scripts/items/ReceiverObject.gd" id="1_of0x3"]
 [ext_resource type="Texture2D" uid="uid://bfkwr8udb342t" path="res://assets/sprites/interior/interior/SmallItems.png" id="2_xh5cf"]
+[ext_resource type="FontFile" uid="uid://dyn5ynd21i0d6" path="res://assets/fonts/Jersey25-Regular.ttf" id="3_xh5cf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e178s"]
 size = Vector2(12, 16)
@@ -26,6 +27,8 @@ shape = SubResource("RectangleShape2D_e178s")
 shape = SubResource("CircleShape2D_rfaoh")
 
 [node name="PromptLabel" type="Label" parent="." unique_id=44295868]
+texture_filter = 1
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("3_xh5cf")
 text = "[E] Place trash here"

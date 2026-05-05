@@ -7,9 +7,13 @@
 [ext_resource type="Texture2D" uid="uid://bfkwr8udb342t" path="res://assets/sprites/interior/interior/SmallItems.png" id="5_e5nfq"]
 [ext_resource type="PackedScene" uid="uid://dyypcy4lnbwl6" path="res://scenes/player/player.tscn" id="6_lha2r"]
 [ext_resource type="PackedScene" uid="uid://j16hl3btqyrs" path="res://scenes/canvasLayer/hud.tscn" id="7_m00rq"]
+[ext_resource type="PackedScene" uid="uid://cwx5lefon2xjn" path="res://scenes/win/WinMenu.tscn" id="8_6ex7q"]
 [ext_resource type="Script" uid="uid://c3gmljvige3l6" path="res://scripts/gameManager/game_manager.gd" id="8_brv20"]
+[ext_resource type="PackedScene" uid="uid://dd0jbjxe74a52" path="res://scenes/pause/PauseMenu.tscn" id="8_dqba7"]
 [ext_resource type="PackedScene" uid="uid://cmuqd7hd2dupe" path="res://scenes/specialObjects/pickupItems/PickupItem.tscn" id="9_7d7pp"]
+[ext_resource type="Texture2D" uid="uid://sj8npx3jdqtt" path="res://assets/sprites/pause/separated/slider.png" id="9_usw5k"]
 [ext_resource type="PackedScene" uid="uid://cwisosisw3t2d" path="res://scenes/specialObjects/receiverItems/ReceiverObject.tscn" id="10_e5nfq"]
+[ext_resource type="FontFile" uid="uid://dyn5ynd21i0d6" path="res://assets/fonts/Jersey25-Regular.ttf" id="10_jsker"]
 [ext_resource type="PackedScene" uid="uid://b38t24yhiga8r" path="res://scenes/specialObjects/consumableItems/ConsumableItem.tscn" id="11_lha2r"]
 [ext_resource type="PackedScene" uid="uid://12hxwywol14v" path="res://scenes/specialObjects/receiverItems/ToyBox.tscn" id="12_6owa4"]
 [ext_resource type="PackedScene" uid="uid://lx618181kyh5" path="res://scenes/specialObjects/pickupItems/ToyDuck.tscn" id="13_n5pya"]
@@ -1802,6 +1806,12 @@ tile_set = SubResource("TileSet_njy47")
 
 [node name="HUD" parent="." unique_id=982534207 instance=ExtResource("7_m00rq")]
 
+[node name="WinMenu" parent="HUD" unique_id=2064847421 instance=ExtResource("8_6ex7q")]
+
+[node name="PauseMenu" parent="HUD" unique_id=1229839065 instance=ExtResource("8_dqba7")]
+slider_grabber_texture = ExtResource("9_usw5k")
+title_font = ExtResource("10_jsker")
+
 [node name="GameManager" type="Node" parent="." unique_id=1003660081]
 script = ExtResource("8_brv20")
 
@@ -1838,7 +1848,7 @@ position = Vector2(173, 139)
 position = Vector2(167, 190)
 
 [node name="CookingPan" parent="GameManager/Objects" unique_id=625738777 instance=ExtResource("19_bspq0")]
-position = Vector2(367, 309)
+position = Vector2(373, 302)
 
 [node name="Vegetables" parent="GameManager/Objects" unique_id=2125980678 instance=ExtResource("20_dqba7")]
 position = Vector2(42, 346)

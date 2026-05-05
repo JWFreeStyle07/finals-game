@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cwx5lefon2xjn"]
+
+[ext_resource type="Script" uid="uid://ckjcytm6826oi" path="res://scripts/win/WinMenu.gd" id="1_7w1gu"]
+[ext_resource type="Texture2D" uid="uid://bb4jn77x3rsse" path="res://assets/sprites/winUI/winning_board.png" id="2_7chto"]
+[ext_resource type="Texture2D" uid="uid://g8jjrq6v2dxl" path="res://assets/sprites/winUI/green_banner.png" id="3_tebf7"]
+[ext_resource type="Texture2D" uid="uid://i6l6vwodb1f7" path="res://assets/sprites/winUI/star.png" id="4_yagcy"]
+[ext_resource type="Texture2D" uid="uid://b6qlqhonkvqcn" path="res://assets/sprites/winUI/empty_star.png" id="5_1ciiv"]
+[ext_resource type="Texture2D" uid="uid://b6vd2la5mqlmg" path="res://assets/sprites/winUI/quit_next_button.png" id="6_sa8iv"]
+[ext_resource type="FontFile" uid="uid://dyn5ynd21i0d6" path="res://assets/fonts/Jersey25-Regular.ttf" id="7_8rtr3"]
+
+[node name="WinMenu" type="CanvasLayer" unique_id=2064847421]
+script = ExtResource("1_7w1gu")
+board_texture = ExtResource("2_7chto")
+banner_texture = ExtResource("3_tebf7")
+star_texture = ExtResource("4_yagcy")
+empty_star_texture = ExtResource("5_1ciiv")
+quit_button_texture = ExtResource("6_sa8iv")
+next_button_texture = ExtResource("6_sa8iv")
+title_font = ExtResource("7_8rtr3")
+banner_font = ExtResource("7_8rtr3")
+score_font = ExtResource("7_8rtr3")
+button_font = ExtResource("7_8rtr3")
+title_font_size = 48
+banner_font_size = 32
+score_font_size = 32
+button_font_size = 32
+title_color = Color(0.26666668, 0.09411765, 0.09019608, 1)
+banner_color = Color(0.26666668, 0.09411765, 0.09019608, 1)
+score_label_color = Color(0.26666668, 0.09411765, 0.09019608, 1)
+score_value_color = Color(0.26666668, 0.09411765, 0.09019608, 1)
+button_label_color = Color(0.26666668, 0.09411765, 0.09019608, 1)
+vbox_separation = 0
+button_separation = 0
+star_size = 35
+button_width = 300
+button_height = 200

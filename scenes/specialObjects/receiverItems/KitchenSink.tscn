@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cxgo2403p558v"]
 
 [ext_resource type="Script" uid="uid://su4x8ibn8h4k" path="res://scripts/items/kitchenSink.gd" id="1_3j2gf"]
+[ext_resource type="FontFile" uid="uid://dyn5ynd21i0d6" path="res://assets/fonts/Jersey25-Regular.ttf" id="2_3j2gf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e178s"]
 size = Vector2(34, 42)
@@ -24,6 +25,8 @@ shape = SubResource("RectangleShape2D_e178s")
 shape = SubResource("CircleShape2D_rfaoh")
 
 [node name="PromptLabel" type="Label" parent="." unique_id=44295868]
+texture_filter = 1
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("2_3j2gf")
 text = "[E] Place dishes"

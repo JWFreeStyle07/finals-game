@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c85he04lommbf" path="res://scripts/items/toyDuck.gd" id="1_n2ikq"]
 [ext_resource type="Texture2D" uid="uid://bfkwr8udb342t" path="res://assets/sprites/interior/interior/SmallItems.png" id="2_i06ln"]
+[ext_resource type="FontFile" uid="uid://dyn5ynd21i0d6" path="res://assets/fonts/Jersey25-Regular.ttf" id="3_i06ln"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gecqr"]
 size = Vector2(8, 8)
@@ -10,6 +11,7 @@ size = Vector2(8, 8)
 radius = 7.071068
 
 [node name="ToyDuck" type="StaticBody2D" unique_id=470798135]
+texture_filter = 1
 script = ExtResource("1_n2ikq")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=778704991]
@@ -26,6 +28,8 @@ shape = SubResource("RectangleShape2D_gecqr")
 shape = SubResource("CircleShape2D_em5r3")
 
 [node name="PromptLabel" type="Label" parent="." unique_id=596273186]
+texture_filter = 1
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("3_i06ln")
 text = "[E] Pick up toy"

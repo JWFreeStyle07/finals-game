@@ -1,6 +1,12 @@
 [gd_scene format=3 uid="uid://j16hl3btqyrs"]
 
 [ext_resource type="Script" uid="uid://cpf4waypimcqx" path="res://scripts/canvasLayer/hud.gd" id="1_jknni"]
+[ext_resource type="PackedScene" uid="uid://cwx5lefon2xjn" path="res://scenes/win/WinMenu.tscn" id="2_7qxph"]
+[ext_resource type="Texture2D" uid="uid://bb4jn77x3rsse" path="res://assets/sprites/winUI/winning_board.png" id="3_jfgpi"]
+[ext_resource type="Texture2D" uid="uid://g8jjrq6v2dxl" path="res://assets/sprites/winUI/green_banner.png" id="4_qxlr5"]
+[ext_resource type="Texture2D" uid="uid://i6l6vwodb1f7" path="res://assets/sprites/winUI/star.png" id="5_iprqa"]
+[ext_resource type="Texture2D" uid="uid://b6qlqhonkvqcn" path="res://assets/sprites/winUI/empty_star.png" id="6_7x7no"]
+[ext_resource type="Texture2D" uid="uid://b6vd2la5mqlmg" path="res://assets/sprites/winUI/quit_next_button.png" id="7_uu7j6"]
 
 [node name="HUD" type="CanvasLayer" unique_id=982534207]
 script = ExtResource("1_jknni")
@@ -130,3 +136,11 @@ layout_mode = 2
 
 [node name="InvHint" type="Label" parent="HUDRoot/PanelContainer/VBoxContainer/HBoxContainer" unique_id=741935711]
 layout_mode = 2
+
+[node name="WinMenu" parent="." unique_id=2064847421 instance=ExtResource("2_7qxph")]
+board_texture = ExtResource("3_jfgpi")
+banner_texture = ExtResource("4_qxlr5")
+star_texture = ExtResource("5_iprqa")
+empty_star_texture = ExtResource("6_7x7no")
+quit_button_texture = ExtResource("7_uu7j6")
+next_button_texture = ExtResource("7_uu7j6")

@@ -1,33 +1,40 @@
 [gd_scene format=3 uid="uid://bf4xy67nbotud"]
 
 [ext_resource type="Script" uid="uid://c4a5k7u5fu38d" path="res://scripts/items/cookingPan.gd" id="1_lklv7"]
-[ext_resource type="Texture2D" uid="uid://bfkwr8udb342t" path="res://assets/sprites/interior/interior/SmallItems.png" id="2_0qrdp"]
+[ext_resource type="Texture2D" uid="uid://b7a32m8fwoo36" path="res://assets/sprites/items/pickups/vegetables.png" id="2_lklv7"]
+[ext_resource type="FontFile" uid="uid://dyn5ynd21i0d6" path="res://assets/fonts/Jersey25-Regular.ttf" id="3_0qrdp"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_e178s"]
-size = Vector2(14, 14)
+[sub_resource type="CircleShape2D" id="CircleShape2D_0qrdp"]
+radius = 7.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rfaoh"]
-radius = 14.0
+radius = 12.0
 
 [node name="CookingPan" type="StaticBody2D" unique_id=306230674]
 script = ExtResource("1_lklv7")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=813204601]
-texture = ExtResource("2_0qrdp")
-region_enabled = true
+position = Vector2(-3.812501, 3.6874986)
+scale = Vector2(0.07875001, 0.086874984)
+texture = ExtResource("2_lklv7")
 region_rect = Rect2(64.868965, 65.8582, 14.132378, 13.238953)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=627792568]
-shape = SubResource("RectangleShape2D_e178s")
+position = Vector2(-8, 6)
+shape = SubResource("CircleShape2D_0qrdp")
 
 [node name="InteractZone" type="Area2D" parent="." unique_id=478013075]
+position = Vector2(22, -16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractZone" unique_id=1367497950]
+position = Vector2(-29, 22)
 shape = SubResource("CircleShape2D_rfaoh")
 
 [node name="PromptLabel" type="Label" parent="." unique_id=44295868]
-offset_left = -62.0
-offset_top = 3.0
-offset_right = 89.0
-offset_bottom = 26.0
+texture_filter = 1
+offset_left = -65.0
+offset_top = -39.0
+offset_right = 112.0
+offset_bottom = -16.0
+theme_override_fonts/font = ExtResource("3_0qrdp")
 text = "[E] Put vegetables here"

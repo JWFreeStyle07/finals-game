@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bfkwr8udb342t" path="res://assets/sprites/interior/interior/SmallItems.png" id="1_42v1m"]
 [ext_resource type="Script" uid="uid://dybrc0vah1av1" path="res://scripts/items/consumeTea.gd" id="1_itwqx"]
+[ext_resource type="FontFile" uid="uid://dyn5ynd21i0d6" path="res://assets/fonts/Jersey25-Regular.ttf" id="3_7fnap"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_itwqx"]
 radius = 9.055386
@@ -10,6 +11,7 @@ radius = 9.055386
 radius = 13.0
 
 [node name="Tea" type="StaticBody2D" unique_id=466156364]
+texture_filter = 1
 script = ExtResource("1_itwqx")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=651806709]
@@ -26,6 +28,8 @@ shape = SubResource("CircleShape2D_itwqx")
 shape = SubResource("CircleShape2D_7fnap")
 
 [node name="PromptLabel" type="Label" parent="." unique_id=375605230]
+texture_filter = 1
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("3_7fnap")
 text = "[E] Drink Tea"

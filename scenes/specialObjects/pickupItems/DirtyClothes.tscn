@@ -1,26 +1,30 @@
 [gd_scene format=3 uid="uid://bkrwdub1ay0p8"]
 
-[ext_resource type="Texture2D" uid="uid://bfkwr8udb342t" path="res://assets/sprites/interior/interior/SmallItems.png" id="1_r3u5j"]
 [ext_resource type="Script" uid="uid://c7rhe6fu53st7" path="res://scripts/items/dirtyClothes.gd" id="1_rafo7"]
+[ext_resource type="Texture2D" uid="uid://dl2sby3ljmlkc" path="res://assets/sprites/items/pickups/clothes.png" id="2_rafo7"]
+[ext_resource type="FontFile" uid="uid://dyn5ynd21i0d6" path="res://assets/fonts/Jersey25-Regular.ttf" id="3_q10cx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rafo7"]
-size = Vector2(12, 20)
+size = Vector2(25, 16)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_q10cx"]
-radius = 17.262676
+radius = 20.024984
 
 [node name="dirtyCloth" type="StaticBody2D" unique_id=1660314110]
+texture_filter = 1
 script = ExtResource("1_rafo7")
 item_id = "clothes"
 item_name = "Dirty Clothes"
 item_icon = "👕"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1154205005]
-texture = ExtResource("1_r3u5j")
-region_enabled = true
+position = Vector2(-2, 1)
+scale = Vector2(0.155, 0.15)
+texture = ExtResource("2_rafo7")
 region_rect = Rect2(3.6813812, 0.8077431, 8.528633, 14.257331)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1088664983]
+position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_rafo7")
 
 [node name="InteractZone" type="Area2D" parent="." unique_id=163916102]
@@ -29,6 +33,10 @@ shape = SubResource("RectangleShape2D_rafo7")
 shape = SubResource("CircleShape2D_q10cx")
 
 [node name="PromptLabel" type="Label" parent="." unique_id=1089941511]
-offset_right = 40.0
-offset_bottom = 23.0
+texture_filter = 1
+offset_left = -56.0
+offset_top = -35.0
+offset_right = 124.0
+offset_bottom = -12.0
+theme_override_fonts/font = ExtResource("3_q10cx")
 text = "[E] Pickup Dirty Clothes"

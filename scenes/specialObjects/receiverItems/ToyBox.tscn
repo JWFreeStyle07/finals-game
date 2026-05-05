@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dcnjucjxlehhx" path="res://scripts/items/toyBox.gd" id="1_7dyup"]
 [ext_resource type="Texture2D" uid="uid://bfkwr8udb342t" path="res://assets/sprites/interior/interior/SmallItems.png" id="2_hnn22"]
+[ext_resource type="FontFile" uid="uid://dyn5ynd21i0d6" path="res://assets/fonts/Jersey25-Regular.ttf" id="3_hnn22"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e178s"]
 size = Vector2(12, 10)
@@ -10,6 +11,7 @@ size = Vector2(12, 10)
 radius = 14.0
 
 [node name="ToyBox" type="StaticBody2D" unique_id=306230674]
+texture_filter = 1
 script = ExtResource("1_7dyup")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=813204601]
@@ -26,6 +28,8 @@ shape = SubResource("RectangleShape2D_e178s")
 shape = SubResource("CircleShape2D_rfaoh")
 
 [node name="PromptLabel" type="Label" parent="." unique_id=44295868]
+texture_filter = 1
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("3_hnn22")
 text = "[E] Place toy here"

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cxhalm71l37yc" path="res://scripts/items/clothesBox.gd" id="1_jq8du"]
 [ext_resource type="Texture2D" uid="uid://bfkwr8udb342t" path="res://assets/sprites/interior/interior/SmallItems.png" id="2_d7wrq"]
+[ext_resource type="FontFile" uid="uid://dyn5ynd21i0d6" path="res://assets/fonts/Jersey25-Regular.ttf" id="3_d7wrq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0qafk"]
 radius = 13.038404
@@ -10,6 +11,7 @@ radius = 13.038404
 radius = 18.027756
 
 [node name="laundryBasket" type="StaticBody2D" unique_id=846413963]
+texture_filter = 1
 script = ExtResource("1_jq8du")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=193934779]
@@ -26,6 +28,8 @@ shape = SubResource("CircleShape2D_0qafk")
 shape = SubResource("CircleShape2D_e0tmu")
 
 [node name="PromptLabel" type="Label" parent="." unique_id=668511202]
+texture_filter = 1
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("3_d7wrq")
 text = "[E] Put clothes here"
