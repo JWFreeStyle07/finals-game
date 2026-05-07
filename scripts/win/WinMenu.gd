@@ -435,7 +435,6 @@ func _ready() -> void:
 	_build()
 	hide()
 
-
 # ── Public API ──────────────────────────────────────────────
 
 func show_win(score: int, stars: int = -1) -> void:

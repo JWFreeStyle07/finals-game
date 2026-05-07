@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://ckjcytm6826oi" path="res://scripts/win/WinMenu.gd" id="1_7w1gu"]
 [ext_resource type="Texture2D" uid="uid://bb4jn77x3rsse" path="res://assets/sprites/winUI/winning_board.png" id="2_7chto"]
-[ext_resource type="Texture2D" uid="uid://g8jjrq6v2dxl" path="res://assets/sprites/winUI/green_banner.png" id="3_tebf7"]
 [ext_resource type="Texture2D" uid="uid://i6l6vwodb1f7" path="res://assets/sprites/winUI/star.png" id="4_yagcy"]
 [ext_resource type="Texture2D" uid="uid://b6qlqhonkvqcn" path="res://assets/sprites/winUI/empty_star.png" id="5_1ciiv"]
 [ext_resource type="Texture2D" uid="uid://b6vd2la5mqlmg" path="res://assets/sprites/winUI/quit_next_button.png" id="6_sa8iv"]
@@ -11,7 +10,6 @@
 [node name="WinMenu" type="CanvasLayer" unique_id=2064847421]
 script = ExtResource("1_7w1gu")
 board_texture = ExtResource("2_7chto")
-banner_texture = ExtResource("3_tebf7")
 star_texture = ExtResource("4_yagcy")
 empty_star_texture = ExtResource("5_1ciiv")
 quit_button_texture = ExtResource("6_sa8iv")
