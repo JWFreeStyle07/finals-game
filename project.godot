@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 GameData="*uid://drobvi8bxbxnf"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [input]
 
 move_right={

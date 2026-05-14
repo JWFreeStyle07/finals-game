@@ -89,7 +89,7 @@ extends Control
 @onready var video_player: VideoStreamPlayer = $VideoPlayer
 @onready var skip_button: Button             = $SkipButton
 
-const NEXT_SCENE := "res://scenes/menus/MainMenu.tscn"
+const NEXT_SCENE := "res://scenes/pressAnyKey/pressAnyKey.tscn"
 
 func _ready() -> void:
 	# ── Configure video player ──────────────────

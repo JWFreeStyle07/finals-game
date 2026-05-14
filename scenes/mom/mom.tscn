@@ -322,8 +322,10 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jxsl5"]
-radius = 2.0
-height = 4.0
+radius = 9.0
+height = 36.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e6wit"]
 
 [node name="Mom" type="CharacterBody2D" unique_id=280364337]
 collision_layer = 4
@@ -333,7 +335,7 @@ weapon_scene = ExtResource("2_wjb7o")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1796577985]
 auto_translate_mode = 2
-position = Vector2(-52.5, 57.5)
+position = Vector2(-0.99998856, 9.000004)
 scale = Vector2(0.07621949, 0.053779066)
 sprite_frames = SubResource("SpriteFrames_h7han")
 animation = &"idle_down"
@@ -341,8 +343,15 @@ animation = &"idle_down"
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1226936545]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=974530930]
-position = Vector2(-52, 62)
+position = Vector2(-1, 9)
 shape = SubResource("CapsuleShape2D_jxsl5")
 
 [node name="ThrowPoint" type="Marker2D" parent="." unique_id=199046745]
+position = Vector2(-3, 2)
 gizmo_extents = 5.0
+
+[node name="HurtArea" type="Area2D" parent="." unique_id=36883748]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtArea" unique_id=814621248]
+position = Vector2(-1, 8)
+shape = SubResource("CapsuleShape2D_e6wit")

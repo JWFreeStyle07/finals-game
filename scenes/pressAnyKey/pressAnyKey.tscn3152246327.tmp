@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bx1ns02ngsdrx"]
+
+[ext_resource type="Script" uid="uid://bj8fln1cetrxj" path="res://scripts/pressAnyKey/press_any_key.gd" id="1_2vxvs"]
+
+[node name="Control" type="Control" unique_id=1613771511]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_2vxvs")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=503134449]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="." unique_id=455314756]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0

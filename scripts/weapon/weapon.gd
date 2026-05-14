@@ -150,7 +150,7 @@ extends Area2D
 #  TUNING
 # ─────────────────────────────────────────────
 const TRAVEL_SPEED  := 500.0
-const SPIN_SPEED    := 3.0
+const SPIN_SPEED    := 2.0
 const DAMAGE        := 25.0
 const SLOW_FACTOR   := 0.4
 const SLOW_DURATION := 1.0
