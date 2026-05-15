@@ -5,15 +5,27 @@
 [ext_resource type="FontFile" uid="uid://dyn5ynd21i0d6" path="res://assets/fonts/Jersey25-Regular.ttf" id="3_8qotv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gecqr"]
-size = Vector2(8, 8)
+size = Vector2(10, 4)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_em5r3"]
-radius = 7.071068
+radius = 13.038404
 
 [node name="PickupItem" type="StaticBody2D" unique_id=470798135]
 script = ExtResource("1_2jvet")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=778704991]
+texture = ExtResource("2_2ei2o")
+region_enabled = true
+region_rect = Rect2(52.566494, 22.594097, 8.648354, 8.6483555)
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=2006674966]
+position = Vector2(3, 3)
+texture = ExtResource("2_2ei2o")
+region_enabled = true
+region_rect = Rect2(52.566494, 22.594097, 8.648354, 8.6483555)
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1075613468]
+position = Vector2(-5, 1)
 texture = ExtResource("2_2ei2o")
 region_enabled = true
 region_rect = Rect2(52.566494, 22.594097, 8.648354, 8.6483555)

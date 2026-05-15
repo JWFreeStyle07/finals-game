@@ -11,6 +11,7 @@ extends Control
 @onready var video_player: VideoStreamPlayer = $VideoPlayer
 
 const NEXT_SCENE := "res://scenes/tutorial/Tutorial.tscn"  # ← set your tutorial path here
+#const NEXT_SCENE := "res://scenes/levels/Level1.tscn"  # ← set your tutorial path here
 
 var _can_skip := false   # small delay so the scene doesn't flash past instantly
 

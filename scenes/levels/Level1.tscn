@@ -1816,7 +1816,6 @@ title_font = ExtResource("10_jsker")
 
 [node name="GameManager" type="Node" parent="." unique_id=1003660081]
 script = ExtResource("8_brv20")
-level_time_seconds = 5
 next_level_scene = "res://scenes/levels/Level2.tscn"
 win_scene = "res://scenes/win/WinMenu.tscn"
 deadline_scene = "res://scenes/mom/mom.tscn"

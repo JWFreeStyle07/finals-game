@@ -20,7 +20,8 @@ var game_active: bool = true
 
 func _ready() -> void:
 	add_to_group("game_manager")
-
+	
+	await get_tree().process_frame
 	player.stats_changed.connect(hud.update_stats)
 	player.inventory_changed.connect(hud.update_inventory)
 	player.stat_depleted.connect(_on_stat_depleted)
@@ -58,6 +59,7 @@ func try_complete_task(item_id: String, receiver_id: String) -> void:
 		if tasks_done[i]:
 			continue
 		var t : Dictionary = tasks[i]
+		print("checking task: ", t.get("item_id",""), " / ", t.get("receiver_id",""))
 		if t.get("item_id", "") == item_id and t.get("receiver_id", "") == receiver_id:
 			tasks_done[i] = true
 			hud.complete_task(i)
@@ -72,6 +74,7 @@ func _on_task_completed(_index: int) -> void:
 
 
 func _check_win() -> void:
+	print("checking win, tasks_done: ", tasks_done)
 	if tasks_done.all(func(d): return d):
 		_trigger_win()
 
@@ -81,16 +84,10 @@ func _trigger_win() -> void:
 		return
 	game_active = false
 
-	# Small pause so the player sees the checkmark
+	print("WIN triggered — going to Level 1 in 2 seconds")
 	await get_tree().create_timer(2.0).timeout
-
-	# Fade the whole tree to black then load Level 1
-	var tween := create_tween()
-	tween.tween_property(get_tree().get_root(), "modulate:a", 0.0, 0.8)
-	await tween.finished
-
+	print("Changing scene to: ", level1_scene)
 	get_tree().change_scene_to_file(level1_scene)
-
 
 func _on_stat_depleted(_stat_name: String) -> void:
 	# In tutorial, just restore the stat instead of game-over

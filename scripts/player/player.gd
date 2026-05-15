@@ -12,7 +12,7 @@ var energy    := MAX_ENERGY
 var happiness := MAX_HAPPINESS
 
 # Passive drain per second — happiness drains slowly over time
-const HAPPINESS_DRAIN := 0.3
+const HAPPINESS_DRAIN := 0.8
 
 # Energy drain per second ONLY while moving
 const ENERGY_MOVE_DRAIN := 2.0
