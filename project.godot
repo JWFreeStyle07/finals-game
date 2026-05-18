@@ -18,10 +18,12 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameData="*uid://drobvi8bxbxnf"
+CursorManager="*uid://ht4dk81jiuys"
 
 [display]
 
 window/stretch/mode="canvas_items"
+mouse_cursor/custom_image="uid://bp2ejqmafayms"
 
 [input]
 

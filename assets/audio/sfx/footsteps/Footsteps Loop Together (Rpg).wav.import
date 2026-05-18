@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bvxo3fxohot3t"
+path="res://.godot/imported/Footsteps Loop Together (Rpg).wav-0abfee5daa500cf09c594c0796794d2a.sample"
+
+[deps]
+
+source_file="res://assets/audio/sfx/footsteps/Footsteps Loop Together (Rpg).wav"
+dest_files=["res://.godot/imported/Footsteps Loop Together (Rpg).wav-0abfee5daa500cf09c594c0796794d2a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

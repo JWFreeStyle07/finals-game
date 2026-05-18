@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bnd6lq3rkhros"
+path="res://.godot/imported/Footstep - Dirt -001.wav-e5f1f644b2cfd36770deaf5573207883.sample"
+
+[deps]
+
+source_file="res://assets/audio/sfx/footsteps/Footstep - Dirt -001.wav"
+dest_files=["res://.godot/imported/Footstep - Dirt -001.wav-e5f1f644b2cfd36770deaf5573207883.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

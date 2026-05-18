@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://badky5wqybjpx"
+path="res://.godot/imported/Footstep - Wood -004.wav-f760fc3cdb1b1b4477b96b66a971df86.sample"
+
+[deps]
+
+source_file="res://assets/audio/sfx/footsteps/Footstep - Wood -004.wav"
+dest_files=["res://.godot/imported/Footstep - Wood -004.wav-f760fc3cdb1b1b4477b96b66a971df86.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

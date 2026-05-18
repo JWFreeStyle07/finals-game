@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bx1ns02ngsdrx"]
 
 [ext_resource type="Script" uid="uid://bj8fln1cetrxj" path="res://scripts/pressAnyKey/press_any_key.gd" id="1_2vxvs"]
+[ext_resource type="AudioStream" uid="uid://btxjwu602frv3" path="res://assets/audio/sfx/bg-sound-start_game_screen(press start).mp3" id="2_ccojw"]
 
 [node name="Control" type="Control" unique_id=1613771511]
 layout_mode = 3
@@ -18,3 +19,7 @@ offset_bottom = 40.0
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
+
+[node name="BGMusic" type="AudioStreamPlayer" parent="." unique_id=1424596006]
+stream = ExtResource("2_ccojw")
+autoplay = true

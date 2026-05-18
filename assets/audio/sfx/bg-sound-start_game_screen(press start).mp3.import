@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://btxjwu602frv3"
+path="res://.godot/imported/bg-sound-start_game_screen(press start).mp3-dfeee272910fe78499007fad10f9d784.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/sfx/bg-sound-start_game_screen(press start).mp3"
+dest_files=["res://.godot/imported/bg-sound-start_game_screen(press start).mp3-dfeee272910fe78499007fad10f9d784.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
