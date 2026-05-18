@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://857didjkxqr"]
+
+[ext_resource type="Script" uid="uid://c2v2u8e017tgt" path="res://scripts/tutorial/tutorial_win_menu.gd" id="1_ieafv"]
+[ext_resource type="Texture2D" uid="uid://bb4jn77x3rsse" path="res://assets/sprites/winUI/winning_board.png" id="2_ghupo"]
+[ext_resource type="Texture2D" uid="uid://g8jjrq6v2dxl" path="res://assets/sprites/winUI/green_banner.png" id="3_6sgcg"]
+[ext_resource type="Texture2D" uid="uid://i6l6vwodb1f7" path="res://assets/sprites/winUI/star.png" id="4_4i6ly"]
+[ext_resource type="Texture2D" uid="uid://b6vd2la5mqlmg" path="res://assets/sprites/winUI/quit_next_button.png" id="4_5vs73"]
+[ext_resource type="AudioStream" uid="uid://cqpcbvj442ury" path="res://assets/audio/sfx/win game.wav" id="5_4i6ly"]
+[ext_resource type="Texture2D" uid="uid://b6qlqhonkvqcn" path="res://assets/sprites/winUI/empty_star.png" id="5_ms3ji"]
+[ext_resource type="FontFile" uid="uid://dyn5ynd21i0d6" path="res://assets/fonts/Jersey25-Regular.ttf" id="6_ms3ji"]
+
+[node name="TutorialWinMenu" type="CanvasLayer" unique_id=1795272911]
+script = ExtResource("1_ieafv")
+board_texture = ExtResource("2_ghupo")
+banner_texture = ExtResource("3_6sgcg")
+star_texture = ExtResource("4_4i6ly")
+empty_star_texture = ExtResource("5_ms3ji")
+quit_button_texture = ExtResource("4_5vs73")
+next_button_texture = ExtResource("4_5vs73")
+victory_sound = ExtResource("5_4i6ly")
+title_font = ExtResource("6_ms3ji")
+banner_font = ExtResource("6_ms3ji")
+score_font = ExtResource("6_ms3ji")
+button_font = ExtResource("6_ms3ji")

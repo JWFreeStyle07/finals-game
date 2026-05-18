@@ -17,16 +17,23 @@ var _is_typing  : bool          = false
 var _skip_typing: bool          = false
 var _active     : bool          = false
 
+var convo_music : AudioStreamPlayer
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	_build_ui()
 	visible = false
 
-	# ── Assign your SpriteFrames and play idle animation ──
-	# Replace the path and animation name with your own
+	# ── Conversation music setup ───────────────
+	convo_music = AudioStreamPlayer.new()
+	convo_music.stream = load("res://assets/audio/sfx/Fish_Dialog.mp3")
+	convo_music.volume_db = -8.0  # quieter than bg music
+	convo_music.autoplay = false
+	add_child(convo_music)
+
 	character_sprite.sprite_frames = load("res://assets/sprites/characters/Fish/fish_animation.tres")
 	character_sprite.play("idle")
+
 
 func start_conversation(pages: Array[String], speaker: String = "Mom") -> void:
 	_pages      = pages
@@ -38,7 +45,9 @@ func start_conversation(pages: Array[String], speaker: String = "Mom") -> void:
 	continue_hint.visible = false
 	get_tree().paused = true
 
-	# Play talk animation if available
+	# ── Play convo music, bg music keeps going ──
+	convo_music.play()
+
 	if character_sprite.sprite_frames != null and \
 			character_sprite.sprite_frames.has_animation("talk"):
 		character_sprite.play("talk")
@@ -114,6 +123,10 @@ func _end_conversation() -> void:
 	_active = false
 	get_tree().paused = false
 	visible = false
+
+	# ── Stop convo music, bg music keeps going ──
+	convo_music.stop()
+
 	emit_signal("conversation_finished")
 
 
@@ -140,8 +153,8 @@ func _build_ui() -> void:
 	spr_holder.set_anchor(SIDE_TOP,    1.0)
 	spr_holder.set_anchor(SIDE_BOTTOM, 1.0)
 	spr_holder.offset_left   = 10
-	spr_holder.offset_right  = 210    # 200px wide
-	spr_holder.offset_top    = -420   # 240px tall
+	spr_holder.offset_right  = 210
+	spr_holder.offset_top    = -420
 	spr_holder.offset_bottom = -180
 	root_control.add_child(spr_holder)
 
@@ -166,11 +179,10 @@ func _build_ui() -> void:
 	spr_holder.add_child(spr_anchor)
 
 	# AnimatedSprite2D — centered inside the holder box
-	# Holder is 200px wide x 240px tall so center = (100, 120)
 	var anim_spr := AnimatedSprite2D.new()
 	anim_spr.name     = "CharacterSprite"
 	anim_spr.position = Vector2(95, 113)
-	anim_spr.scale    = Vector2(0.5, 0.5)   # adjust scale to fit your sprite
+	anim_spr.scale    = Vector2(0.5, 0.5)
 	spr_anchor.add_child(anim_spr)
 	character_sprite = anim_spr
 
@@ -236,15 +248,9 @@ func _build_ui() -> void:
 	hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 	vbox.add_child(hint)
 	continue_hint = hint
-# ── Custom font ───────────────────────────────
-	# Replace the path with your actual font file
+
+	# ── Custom font ───────────────────────────────
 	var my_font := load("res://assets/fonts/Minecraft.ttf") as FontFile
-
-	# Apply to speaker name label
 	speaker_name.add_theme_font_override("font", my_font)
-
-	# Apply to dialog text
 	dialog_text.add_theme_font_override("normal_font", my_font)
-
-	# Apply to continue hint
 	continue_hint.add_theme_font_override("font", my_font)

@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bb4jn77x3rsse" path="res://assets/sprites/winUI/winning_board.png" id="2_7chto"]
 [ext_resource type="Texture2D" uid="uid://i6l6vwodb1f7" path="res://assets/sprites/winUI/star.png" id="4_yagcy"]
 [ext_resource type="Texture2D" uid="uid://b6qlqhonkvqcn" path="res://assets/sprites/winUI/empty_star.png" id="5_1ciiv"]
+[ext_resource type="AudioStream" uid="uid://cqpcbvj442ury" path="res://assets/audio/sfx/win game.wav" id="6_7chto"]
 [ext_resource type="Texture2D" uid="uid://b6vd2la5mqlmg" path="res://assets/sprites/winUI/quit_next_button.png" id="6_sa8iv"]
 [ext_resource type="FontFile" uid="uid://dyn5ynd21i0d6" path="res://assets/fonts/Jersey25-Regular.ttf" id="7_8rtr3"]
 
@@ -14,6 +15,7 @@ star_texture = ExtResource("4_yagcy")
 empty_star_texture = ExtResource("5_1ciiv")
 quit_button_texture = ExtResource("6_sa8iv")
 next_button_texture = ExtResource("6_sa8iv")
+victory_sound = ExtResource("6_7chto")
 title_font = ExtResource("7_8rtr3")
 banner_font = ExtResource("7_8rtr3")
 score_font = ExtResource("7_8rtr3")

@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cmuqd7hd2dupe" path="res://scenes/specialObjects/pickupItems/PickupItem.tscn" id="10_yacan"]
 [ext_resource type="PackedScene" uid="uid://cwisosisw3t2d" path="res://scenes/specialObjects/receiverItems/ReceiverObject.tscn" id="11_4lfrr"]
 [ext_resource type="Script" uid="uid://cglxksdssmnca" path="res://scripts/conversationUI/conversation_ui.gd" id="11_n72fr"]
+[ext_resource type="PackedScene" uid="uid://857didjkxqr" path="res://scenes/tutorial/TutorialWinMenu.tscn" id="11_sqq5o"]
 [ext_resource type="SpriteFrames" uid="uid://mq0ntrogsfq4" path="res://assets/sprites/characters/Fish/fish_animation.tres" id="12_ij8ga"]
 [ext_resource type="Script" uid="uid://dwb2nk2llmepb" path="res://scripts/tutorialTrigger/tutorial_trigger.gd" id="14_is5q5"]
 [ext_resource type="Texture2D" uid="uid://kaneqdii6dp0" path="res://assets/sprites/tutorialTrigger/tub.png" id="16_4nkms"]
@@ -1811,6 +1812,9 @@ script = ExtResource("7_1ffnh")
 
 [node name="PauseMenu" parent="HUD" unique_id=1229839065 instance=ExtResource("8_gy78t")]
 title_font = ExtResource("9_yqdhf")
+
+[node name="TutorialWinMenu" parent="HUD" unique_id=1795272911 instance=ExtResource("11_sqq5o")]
+button_font = null
 
 [node name="ConversationUI" type="CanvasLayer" parent="." unique_id=1904374636 groups=["conversation_ui"]]
 script = ExtResource("11_n72fr")
